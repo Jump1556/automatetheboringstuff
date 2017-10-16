@@ -33,4 +33,14 @@ quiz_file.write('\n\n')
 states = list(capitals.keys())
 random.shuffle(states)
 
-       # TODO: Loop through all 50 states, making a question for each.
+for quiz_num in range(50):
+   correct_answ = capitals[states[question_num]]
+   wrong_answ = list(capitals.values())
+   del wrong_answ[wrong_answ.index(correct_answ)]
+   wrong_answ = random.sample(wrong_answ, 3)
+   anws_options = wrong_answ + [correct_answ]
+   random.shuffle(anws_options)
+
+ # TODO: Write the question and answer options to the quiz file.
+
+# TODO: Write the answer key to a file.
