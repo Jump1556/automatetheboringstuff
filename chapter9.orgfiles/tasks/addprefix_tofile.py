@@ -8,6 +8,6 @@ def find_all_txt (mydir):
     for filename in os.listdir(mydir):
         if filename.endswith(".txt"):
             new_filename = 'new'+filename
-            shutil.move(str(mydir +'/' +filename), str(mydir +'/' +new_filename))
+            shutil.move(str(mydir + filename), str(mydir + new_filename))
 
-print(find_all_txt('/Users/anastasia'))
+print(find_all_txt('/Users/anastasia/'))
